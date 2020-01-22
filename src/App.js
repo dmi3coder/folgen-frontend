@@ -185,7 +185,7 @@ export default function App() {
         <main className={classes.content}>
           <div className={classes.toolbar} />
           <Switch>
-              <Route path="/cards">     
+              <Route path="/cards">New text
                 {
                   data.map(elem => {
                       return <CardOwn 
