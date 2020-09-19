@@ -2,7 +2,7 @@ import React from 'react';
 import FollowupInfo from './FollowupInfo.js';
 
 const FollowupsGroup = () => {
-    const data = [
+    const dataArr = [
         {
           "from": "v.kovalkovska",
           "subject": "Fill details form",
@@ -32,11 +32,13 @@ const FollowupsGroup = () => {
           "date": "27/01/2020 00:00"
         }
     ]
+    const [data, setData] = React.useState(dataArr);
     return (
         <div>
             {
-                data.map(elem => {
+                data.map((elem, index) => {
                     return <FollowupInfo
+                        key={index}
                         followup={elem} 
                     />
                 })
